@@ -1,18 +1,12 @@
 # AmazonClone
+
 Building a Full Stack Clone of Amazon (accounts, checkout, payment processing, order history, etc)
 
-
-
-
-
-
-
-
-1. To Get Started use 
-npx create-react-app nameofapp
+1. To Get Started use
+   npx create-react-app nameofapp
 
 2. create a data base with firebase
-click </> 
+   click </>
 
 3. use sudo npm install -g firebase-tools (sudo helps with installing globally
 
@@ -22,17 +16,17 @@ click </>
 
 6. Start creating components, add in App.js
 
-7. install material UI /material-ui.com  npm install @material-ui/core
-then install icons with npm install @material-ui/icons or if for fonts use correct npm install command and import each icon as you would and use like a component
+7. install material UI /material-ui.com npm install @material-ui/core
+   then install icons with npm install @material-ui/icons or if for fonts use correct npm install command and import each icon as you would and use like a component
 
 8. using props to render different products to <product/>, pass in props into the product function product.js
 
-9. install React Router, this is to give your pages different routes like /checkout 
-npm install react-router-dom
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom"; in app js
+9. install React Router, this is to give your pages different routes like /checkout
+   npm install react-router-dom
+   import { BrowserRouter as Router, Route, Switch } from "react-router-dom"; in app js
 
 10. Use router like this <Router>
-      <div className="app">
+      <!-- <div className="app">
         <Switch>
           <Route path="/checkout">
             <Header />
@@ -45,7 +39,6 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom"; in ap
         </Switch>
       </div>
     </Router>
-    MAKE SURE TO PUT THE DEFAULT OR EMPTY '/' AT THE BOTTOM OR IT WILL NOT RENDER THE OTHERS.
+    MAKE SURE TO PUT THE DEFAULT OR EMPTY '/' AT THE BOTTOM OR IT WILL NOT RENDER THE OTHERS. -->
 
-    11. 
-
+    11.
