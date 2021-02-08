@@ -26,7 +26,7 @@ Building a Full Stack Clone of Amazon (accounts, checkout, payment processing, o
    import { BrowserRouter as Router, Route, Switch } from "react-router-dom"; in app js
 
 10. Use router like this <Router>
-      <!-- <div className="app">
+      ```<div className="app">
         <Switch>
           <Route path="/checkout">
             <Header />
@@ -38,7 +38,7 @@ Building a Full Stack Clone of Amazon (accounts, checkout, payment processing, o
           </Route>
         </Switch>
       </div>
-    </Router>
-    MAKE SURE TO PUT THE DEFAULT OR EMPTY '/' AT THE BOTTOM OR IT WILL NOT RENDER THE OTHERS. -->
+    </Router>```
+    MAKE SURE TO PUT THE DEFAULT OR EMPTY '/' AT THE BOTTOM OR IT WILL NOT RENDER THE OTHERS.
 
     11.
