@@ -26,19 +26,23 @@ Building a Full Stack Clone of Amazon (accounts, checkout, payment processing, o
    import { BrowserRouter as Router, Route, Switch } from "react-router-dom"; in app js
 
 10. Use router like this <Router>
-      ```<div className="app">
-        <Switch>
-          <Route path="/checkout">
-            <Header />
-            <h1>I am checkout</h1>
-          </Route>
-          <Route path="/">
-            <Header />
-            <Home />
-          </Route>
-        </Switch>
-      </div>
+
+    ````<div className="app">
+     <Header />
+     <Switch>
+        <Route path="/checkout">
+          <h1>I am checkout</h1>
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </div>
     </Router>```
     MAKE SURE TO PUT THE DEFAULT OR EMPTY '/' AT THE BOTTOM OR IT WILL NOT RENDER THE OTHERS.
 
-    11.
+    ````
+
+11. Create Checkout page and subtotal install react currency format with npm install react-currency-format
+
+12. Now we have to use React Context API/REDUX for when we add to cart, everytime I add to cart it will push the product into the data layer(react context api/redux). After it is stored inside that data layer we can put it into any component we need like the basket/checkout
