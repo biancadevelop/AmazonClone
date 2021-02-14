@@ -6,7 +6,7 @@ import { getBasketTotal } from "../Reducer";
 
 function Subtotal() {
   //where all basket items are stored .. data layer
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ basket }] = useStateValue();
 
   return (
     <div className="subtotal">

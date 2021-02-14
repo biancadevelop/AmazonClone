@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 import "../style/CheckoutProduct.css";
 import { useStateValue } from "../StateProvider";
