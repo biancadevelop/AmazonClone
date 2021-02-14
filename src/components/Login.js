@@ -1,9 +1,24 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React from "react";
+import React, { useState } from "react";
 import "../style/Login.css";
 import { Link } from "react-router-dom";
 
 function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const signIn = (e) => {
+    e.preventDefault(); //this prevents the page from refreshing after clicking sign in
+
+    //some fancy firebase login shit
+  };
+
+  const register = (e) => {
+    e.preventDefault(); //this prevents the page from refreshing after click register
+    
+    //some fancy firebase register shittt
+};
+
   return (
     <div className="login">
       <Link to="/">
@@ -17,11 +32,24 @@ function Login() {
         <h1>Sign-In</h1>
         <form>
           <h5>E-Mail</h5>
-          <input type="text" />
-
+          <input
+            type="text"
+            value={email} //then this value from onchange gets mapped like a circle into this value
+            onChange={(e) => setEmail(e.target.value)} //this on change fires when user types in an email
+          />
           <h5>Password</h5>
-          <input type="password" />
-          <button className="login__signInButton">Sign In</button>
+          <input
+            type="password"
+            value={password} //this value from onchange gets mapped like a circle into this value
+            onChange={(e) => setPassword(e.target.value)} // on change fires when user types in a password
+          />
+          <button
+            type="submit"
+            onClick={signIn}
+            className="login__signInButton"
+          >
+            Sign In
+          </button>
         </form>
 
         <p>
@@ -29,7 +57,7 @@ function Login() {
           Sale. Please see our Privacy Notice, our Cookies Notice and our
           Interest-Based Ads Notice.
         </p>
-        <button className="login__registerButton">
+        <button onClick={register} className="login__registerButton">
           Create your Amazon account
         </button>
       </div>
