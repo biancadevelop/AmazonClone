@@ -1,23 +1,40 @@
-/* eslint-disable jsx-a11y/alt-text */
 import React, { useState } from "react";
 import "../style/Login.css";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import { auth } from "../firebase";
+import firebase from "firebase";
 
 function Login() {
+  const history = useHistory(); //used to redirect after register/login
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const signIn = (e) => {
     e.preventDefault(); //this prevents the page from refreshing after clicking sign in
 
-    //some fancy firebase login shit
+  auth
+      .signInWithEmailAndPassword(email, password)
+      .then((auth) => {
+        history.push("/");
+      })
+      .catch((error) => alert(error.message));
   };
 
   const register = (e) => {
     e.preventDefault(); //this prevents the page from refreshing after click register
-    
-    //some fancy firebase register shittt
-};
+
+ auth
+      .createUserWithEmailAndPassword(email, password)
+      .then((auth) => {
+        //it suceeded creating a new user with email & password
+        console.log(auth);
+        //if auth comes back redirect to homepage
+        if (auth) {
+          history.push("/");
+        }
+      }) // if it doesnt work till alert a error message
+      .catch((error) => alert(error.message));
+  };
 
   return (
     <div className="login">
@@ -25,6 +42,7 @@ function Login() {
         <img
           className="login__logo"
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png"
+          alt="logo"
         />
       </Link>
 
