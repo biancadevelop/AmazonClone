@@ -17,7 +17,6 @@ function App() {
     auth.onAuthStateChanged((authUser) => {
       //this is a listener if we log out, register.. it will fire this effect
 
-      console.log("user is", authUser);
 
       if (authUser) {
         //the user just logged in / was already logged in
@@ -29,7 +28,7 @@ function App() {
       } else {
         //the user is logged out
         dispatch({
-          type: "SET__USER",
+          type: "SET_USER",
           user: null,
         });
       }
