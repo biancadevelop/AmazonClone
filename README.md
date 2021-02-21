@@ -46,3 +46,5 @@ Building a Full Stack Clone of Amazon (accounts, checkout, payment processing, o
 11. Create Checkout page and subtotal install react currency format with npm install react-currency-format
 
 12. Now we have to use React Context API/REDUX for when we add to cart, everytime I add to cart it will push the product into the data layer(react context api/redux). After it is stored inside that data layer we can put it into any component we need like the basket/checkout
+
+13. Add stripe payment processing to project with api key in app.js
